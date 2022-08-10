@@ -2,6 +2,7 @@ from pprint import pprint
 
 from selenium import webdriver
 
+import downloader
 import page_analyzer
 
 if __name__ == "__main__":
@@ -23,3 +24,7 @@ if __name__ == "__main__":
 	film_name = page_analyzer.get_name(test_url)
 	pprint(film_name)
 	pprint(audio_tracks)
+
+	test_file_url = "http://osmium.stream.voidboost.cc/5/7/7/1/5/fdf07f15dda5da3795e5ae7f4e0e048e:2022081013:OXBOQkxLU2NXR3l1NFQ3UllISmFiUE5KZFhpSWQ3M0NVdHV2a0lvdERSWk9RMUZrKzRWNXhFVk5CZWRra0U3cHZaT2NERERlcDhjN29OZ1hnZ2FFczJxaE5vTkgwdEVTbnNVUjAxNVJEaUU9/7g5rw.mp4:hls:manifest.m3u8"
+
+	downloader.download_film(test_file_url)
